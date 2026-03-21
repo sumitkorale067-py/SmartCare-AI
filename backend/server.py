@@ -32,7 +32,7 @@ from routes.emergency import router as emergency_router
 from routes.notifications import router as notifications_router
 
 # ---------------- AI SERVICE ----------------
-from services.ai_service import predict_adherence
+from services.ai_service import predict_adherence, predict_adherence_ai
 
 
 # =========================================================
@@ -126,6 +126,12 @@ async def get_status_checks():
 @api_router.get("/ai/adherence/{missed}")
 async def adherence(missed: int):
     return predict_adherence(missed)
+
+
+@api_router.get("/ai/adherence-ai/{missed}")
+async def adherence_ai(missed: int):
+    """Gemini-enhanced adherence prediction with AI-powered recommendations."""
+    return await predict_adherence_ai(missed)
 
 
 # =========================================================

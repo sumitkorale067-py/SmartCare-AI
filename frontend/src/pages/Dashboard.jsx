@@ -57,7 +57,7 @@ export default function Dashboard() {
   useEffect(() => {
     if (!loading && !error) {
       api
-        .get(`/ai/adherence/${missed}`)
+        .get(`/ai/adherence-ai/${missed}`)
         .then((res) => setRisk(res.data))
         .catch(() => setRisk(null));
     }
@@ -341,6 +341,11 @@ export default function Dashboard() {
                   Intervention required:{" "}
                   {risk.intervention_required ? "Yes" : "No"}
                 </span>
+                {risk.ai_provider && (
+                  <span className="inline-flex items-center rounded-full bg-violet-50 text-violet-700 border border-violet-100 px-3 py-1 text-[11px] font-medium">
+                    ✨ {risk.ai_provider === "google-gemini" ? "Powered by Gemini AI" : "Rule-based"}
+                  </span>
+                )}
               </div>
             </div>
           ) : (

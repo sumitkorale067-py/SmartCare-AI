@@ -17,7 +17,7 @@ SmartCare AI is a professional patient-centric health platform designed to help 
 ### Backend
 - **Framework:** FastAPI (Python)
 - **Database:** MongoDB (via Motor & PyMongo)
-- **AI/ML:** Custom Adherence Risk Predictor
+- **AI/ML:** Google Gemini AI + Custom Adherence Risk Predictor
 - **Communications:** Twilio SMS & Voice Call APIs
 - **Task Scheduling:** AsyncIO-based Scheduler
 - **Caching/Brokers:** Redis
