@@ -70,7 +70,7 @@ SmartCare AI is a professional patient-centric health platform designed to help 
 
 ## 📈 Current Condition of Project
 
-**Overall Rating: 9/10** ⭐
+
 
 Both the frontend and backend are verified and correctly configured for deployment. All visible UI elements are functional.
 
@@ -135,4 +135,4 @@ Both the frontend and backend are verified and correctly configured for deployme
 - **Twilio required for real SMS**: Emergency SMS and medication call escalations require valid Twilio API keys in `.env`. Without them, notifications are logged but not delivered.
 - **SMS only**: WhatsApp messaging is not supported. Twilio is configured for standard SMS delivery only.
 
-**The codebase is in clean, production-ready condition.**
+**The codebase is  clean.
