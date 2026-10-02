@@ -29,7 +29,8 @@ async def create_reminder(
     # Prevent duplicate manual reminder
     existing = await db.reminders.find_one({
         "user_id": current_user["id"],
-        "scheduled_key": scheduled_key
+        "scheduled_key": scheduled_key,
+    "medication_name":data.medication_name
     })
 
     if existing:
